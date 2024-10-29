@@ -12,7 +12,7 @@
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postStartCommand": "cd nborgers && bundle install && bundle exec jekyll serve"
+	"postStartCommand": "cd nborgers && bundle install && bundle exec jekyll serve &"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
