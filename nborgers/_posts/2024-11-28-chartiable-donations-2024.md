@@ -1,8 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Giving"
-date: 2024-10-29
+title: "Charitable Donations - 2024"
+date: 2024-11-28
+categories: charity
 ---
 
 {% include mermaid.html %}
@@ -12,18 +13,20 @@ Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1
 -->
 This chart depicts all of my charitable giving so far this year in proportional terms:
 <div class="mermaid">
-pie title 2024 Donation Recipients
-    "Bellingcat" : 93
-    "Forward Party" : 84
-    "Unify America" : 47
-    "Divided We Fall" : 47
-    "Children International" : 29
-    "Freedom Reads" : 28
-    "Represent.us" : 28
-    "EFF" : 23
-    "ACLU" : 9
-    "Wikimedia" : 9
-    "Local Newspaper" : 1
+    pie title 2024 Donation Recipients
+        "Bellingcat" : 93
+        "Semper Fi Fund": 93
+        "Forward Party" : 84
+        "Unify America" : 47
+        "Divided We Fall" : 47
+        "Children International" : 29
+        "Freedom Reads" : 28
+        "Represent.us" : 28
+        "EFF" : 23
+        "Undue Medical Debt": 12
+        "ACLU" : 9
+        "Wikimedia" : 9
+        "Local Newspaper" : 1
 </div>
 Below I explain why I give to these entities.
 
@@ -37,6 +40,17 @@ More people confidently and accurately understanding what is happening in the wo
 
 ### How I heard about them
 A friend mentioned the book "[We Are Bellingcat](https://www.bellingcat.com/book/)" which tells the story of the organization [proving that a Buk missile launcher provided by the Russian Federation was used by members of the Donetsk People’s Republic separatist group to shoot down the civilian airliner MH17](https://www.bellingcat.com/app/uploads/2017/07/mh17-3rd-anniversary-report.pdf).
+
+## [Semper Fi Fund](https://thefund.org)
+
+### Who they are
+They provide multiple forms of support to U.S. veterans.
+
+### What outcome I'm hoping to support
+People who fought for our country should have the support they need to remain or become as whole as possible given the sacrifices they've made.
+
+### How I heard about them
+Not sure, I see emails going back to 2015 so seemingly found them a long time ago.
 
 ## [Forward Party](https://www.forwardparty.com)
 
