@@ -5,10 +5,9 @@ title: "Charitable Donations - 2024"
 date: 2024-11-28
 categories: charity
 ---
-<!--
-Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
--->
 This chart depicts all of my charitable giving so far this year in proportional terms:
+
+<!-- This Javascript pulls in Mermaid, which I'm using to render the chart from text -->
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js">
 </script>
@@ -19,6 +18,10 @@ $(document).ready(function() {
     });
 });
 </script>
+<!--
+This is the text content which drives the chart.
+Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
+-->
 <div class="mermaid">
     pie title 2024 Donation Recipients
         "Bellingcat" : 93
