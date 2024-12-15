@@ -139,6 +139,18 @@ A more secure and open technological world [without warrantless government surve
 ### How I heard about them
 Not sure... another long-standing support relationship. They are widely known among tech, and in particular security, people.
 
+## [Undue Medical Debt](https://unduemedicaldebt.org)
+
+### Who they are
+They purchase and cancel medical debt for pennies on the dollar. All debts (including mortgages) are financial assets which are traded on secondary markets, generlaly in bundles. The debts with the lowest likelihood of repayment are the least expensive, but still traded. A debt instrument with a low likelihood of repayment, and thus low value, is generally associated with a debtor overwhelmed by the debt they owe. When this is something like revolving consumer debt, personal agency was very often a contributing factor in the accumulation of debt. When this is medical debt the debtor could be someone who had health insurance but had their claim denied. This organization buys low-value medical debt instruments and cancels them; effectively forgiving the debt.
+
+### What outcome I'm hoping to support
+Individuals in the US healthcare system are going up against large and well funded institutions in a system where they have no fidicuiary advocates. [Medical debt is a leading cause of personal bankruptcy declaration](https://www.thebalancemoney.com/medical-bankruptcy-statistics-4154729). I don't want this to be the case.
+
+### How I heard about them
+They come out of the Occupy Wall Street movement, and I first contributed around that time.
+
+
 ## [ACLU](https://www.aclu.org)
 
 ### Who they are
