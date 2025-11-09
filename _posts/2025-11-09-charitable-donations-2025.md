@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Charitable Donations - 2025"
-date: 2025-11-209
+date: 2025-11-09
 categories: charity
 ---
 This chart depicts all of my charitable giving so far this year in proportional terms:
