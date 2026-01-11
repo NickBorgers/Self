@@ -15,11 +15,16 @@ Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var chartDom = document.getElementById('treemap-2025');
+    var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var textColor = isDarkMode ? '#e0e0e0' : '#464646';
     var myChart = echarts.init(chartDom, null, {renderer: 'svg'});
     var option = {
         title: {
             text: '2025 Donation Recipients',
-            left: 'center'
+            left: 'center',
+            textStyle: {
+                color: textColor
+            }
         },
         tooltip: {
             formatter: function(info) {
