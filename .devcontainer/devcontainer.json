@@ -2,12 +2,14 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
 	"name": "Jekyll",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
-
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {}
+	"build": {
+		"dockerfile": "Dockerfile"
 	},
+
+	// Mount gh CLI config for authentication
+	"mounts": [
+		"source=${localEnv:HOME}/.config/gh,target=/home/vscode/.config/gh,type=bind"
+	],
 
 	// Set git safe directory config; there has to be a better way to do this
 	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
