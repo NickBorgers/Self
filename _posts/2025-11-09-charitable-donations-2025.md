@@ -7,38 +7,59 @@ categories: charity
 ---
 This chart depicts all of my charitable giving so far this year in proportional terms:
 
-<!-- This Javascript pulls in Mermaid, which I'm using to render the chart from text -->
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js">
-</script>
+<!--
+Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
+-->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<div id="treemap-2025" style="width: 100%; height: 400px;"></div>
 <script>
-$(document).ready(function() {
-    mermaid.initialize({
-        theme: 'default'
+document.addEventListener('DOMContentLoaded', function() {
+    var chartDom = document.getElementById('treemap-2025');
+    var myChart = echarts.init(chartDom, null, {renderer: 'svg'});
+    var option = {
+        title: {
+            text: '2025 Donation Recipients',
+            left: 'center'
+        },
+        tooltip: {
+            formatter: function(info) {
+                return info.name + ': ' + info.value + '%';
+            }
+        },
+        series: [{
+            type: 'treemap',
+            roam: false,
+            nodeClick: false,
+            breadcrumb: { show: false },
+            label: {
+                show: true,
+                formatter: '{b}',
+                fontSize: 12
+            },
+            data: [
+                { name: 'Tarrant Area Food Bank', value: 57.55 },
+                { name: 'Bellingcat', value: 22.68 },
+                { name: 'Forward Party', value: 20.12 },
+                { name: 'Unify America', value: 20.12 },
+                { name: 'Freedom Reads', value: 20.12 },
+                { name: 'Children International', value: 14.71 },
+                { name: 'Semper Fi Fund', value: 11.96 },
+                { name: 'Undue Medical Debt', value: 10.46 },
+                { name: 'Represent.us', value: 6.04 },
+                { name: 'EFF', value: 5.03 },
+                { name: 'ACLU', value: 2.01 },
+                { name: 'Wikimedia', value: 1.81 },
+                { name: 'Internet Archive', value: 1.01 },
+                { name: 'Local Newspaper', value: 1 }
+            ]
+        }]
+    };
+    myChart.setOption(option);
+    window.addEventListener('resize', function() {
+        myChart.resize();
     });
 });
 </script>
-<!--
-This is the text content which drives the chart.
-Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
--->
-<div class="mermaid">
-    pie title 2025 Donation Recipients
-        "Tarrant Area Food Bank" : 57.55
-        "Bellingcat" : 22.68
-        "Forward Party" : 20.12
-        "Unify America" : 20.12
-        "Freedom Reads" : 20.12
-        "Children International" : 14.71
-        "Semper Fi Fund": 11.96
-        "Undue Medical Debt": 10.46
-        "Represent.us" : 6.04
-        "EFF" : 5.03
-        "ACLU" : 2.01
-        "Wikimedia" : 1.81
-        "Internet Archive" : 1.01
-        "Local Newspaper" : 1
-</div>
 Below I explain why I give to these entities.
 
 ## [Tarrant Area Food Bank](https://tafb.org/)

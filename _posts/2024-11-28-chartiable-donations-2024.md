@@ -7,37 +7,58 @@ categories: charity
 ---
 This chart depicts all of my charitable giving so far this year in proportional terms:
 
-<!-- This Javascript pulls in Mermaid, which I'm using to render the chart from text -->
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js">
-</script>
+<!--
+Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
+-->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<div id="treemap-2024" style="width: 100%; height: 400px;"></div>
 <script>
-$(document).ready(function() {
-    mermaid.initialize({
-        theme: 'default'
+document.addEventListener('DOMContentLoaded', function() {
+    var chartDom = document.getElementById('treemap-2024');
+    var myChart = echarts.init(chartDom, null, {renderer: 'svg'});
+    var option = {
+        title: {
+            text: '2024 Donation Recipients',
+            left: 'center'
+        },
+        tooltip: {
+            formatter: function(info) {
+                return info.name + ': ' + info.value + '%';
+            }
+        },
+        series: [{
+            type: 'treemap',
+            roam: false,
+            nodeClick: false,
+            breadcrumb: { show: false },
+            label: {
+                show: true,
+                formatter: '{b}',
+                fontSize: 12
+            },
+            data: [
+                { name: 'Bellingcat', value: 93 },
+                { name: 'Semper Fi Fund', value: 93 },
+                { name: 'Forward Party', value: 84 },
+                { name: 'Unify America', value: 47 },
+                { name: 'Divided We Fall', value: 47 },
+                { name: 'Children International', value: 29 },
+                { name: 'Freedom Reads', value: 28 },
+                { name: 'Represent.us', value: 28 },
+                { name: 'EFF', value: 23 },
+                { name: 'Undue Medical Debt', value: 12 },
+                { name: 'ACLU', value: 9 },
+                { name: 'Wikimedia', value: 9 },
+                { name: 'Local Newspaper', value: 1 }
+            ]
+        }]
+    };
+    myChart.setOption(option);
+    window.addEventListener('resize', function() {
+        myChart.resize();
     });
 });
 </script>
-<!--
-This is the text content which drives the chart.
-Generated from raw dollar figures here: https://docs.google.com/spreadsheets/d/1DWDlyzshMpsc8gxQ1Wb1Lr_6xD6C2DQ9wQe2Lup3aso/edit?gid=0#gid=0
--->
-<div class="mermaid">
-    pie title 2024 Donation Recipients
-        "Bellingcat" : 93
-        "Semper Fi Fund": 93
-        "Forward Party" : 84
-        "Unify America" : 47
-        "Divided We Fall" : 47
-        "Children International" : 29
-        "Freedom Reads" : 28
-        "Represent.us" : 28
-        "EFF" : 23
-        "Undue Medical Debt": 12
-        "ACLU" : 9
-        "Wikimedia" : 9
-        "Local Newspaper" : 1
-</div>
 Below I explain why I give to these entities.
 
 ## [Bellingcat](https://www.bellingcat.com)
