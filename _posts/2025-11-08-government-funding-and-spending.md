@@ -8,6 +8,8 @@ categories: information
 
 This is a collection of links for better understanding how the USA government brings in revenue and spends money.
 
+* [See how much of your tax dollars went to X](https://nickborgers.github.io/how-much-did-it-cost-me/)
+    * I built this as an addendum to this page to put your expenditure on government spending in context
 * [Revenues and expenditures](https://usafacts.org/government-spending/)
     * Most complete and detailed, but lots of information onscreen - may be overwhelming
 * [Expenditures](https://www.usaspending.gov/explorer/budget_function)
