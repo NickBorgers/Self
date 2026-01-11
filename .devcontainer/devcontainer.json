@@ -25,7 +25,7 @@
 			"remote.portsAttributes": {
 			  "4000": {
 				"label": "Jekyll Server",
-				"onAutoForward": "openBrowser"
+				"onAutoForward": "notify"
 			  }
 			}
 		  }
