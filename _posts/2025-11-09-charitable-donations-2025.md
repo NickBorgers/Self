@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         tooltip: {
             formatter: function(info) {
-                return info.name + ': ' + info.value + '%';
+                return info.name + ': ' + info.value + '% (click to learn more)';
             }
         },
         series: [{
             type: 'treemap',
             roam: false,
-            nodeClick: false,
+            nodeClick: 'link',
             breadcrumb: { show: false },
             label: {
                 show: true,
@@ -37,24 +37,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 fontSize: 12
             },
             data: [
-                { name: 'Tarrant Area Food Bank', value: 57.55 },
-                { name: 'Bellingcat', value: 22.68 },
-                { name: 'Forward Party', value: 20.12 },
-                { name: 'Unify America', value: 20.12 },
-                { name: 'Freedom Reads', value: 20.12 },
-                { name: 'Children International', value: 14.71 },
-                { name: 'Semper Fi Fund', value: 11.96 },
-                { name: 'Undue Medical Debt', value: 10.46 },
-                { name: 'Represent.us', value: 6.04 },
-                { name: 'EFF', value: 5.03 },
-                { name: 'ACLU', value: 2.01 },
-                { name: 'Wikimedia', value: 1.81 },
-                { name: 'Internet Archive', value: 1.01 },
-                { name: 'Local Newspaper', value: 1 }
+                { name: 'Tarrant Area Food Bank', value: 57.55, link: '#tarrant-area-food-bank' },
+                { name: 'Bellingcat', value: 22.68, link: '#bellingcat' },
+                { name: 'Forward Party', value: 20.12, link: '#forward-party' },
+                { name: 'Unify America', value: 20.12, link: '#unify-america' },
+                { name: 'Freedom Reads', value: 20.12, link: '#freedom-reads' },
+                { name: 'Children International', value: 14.71, link: '#children-international' },
+                { name: 'Semper Fi Fund', value: 11.96, link: '#semper-fi-fund' },
+                { name: 'Undue Medical Debt', value: 10.46, link: '#undue-medical-debt' },
+                { name: 'Represent.us', value: 6.04, link: '#representus' },
+                { name: 'EFF', value: 5.03, link: '#eff' },
+                { name: 'ACLU', value: 2.01, link: '#aclu' },
+                { name: 'Wikimedia', value: 1.81, link: '#wikimedia' },
+                { name: 'Internet Archive', value: 1.01, link: '#internet-archive' },
+                { name: 'Local Newspaper', value: 1, link: '#local-newspaper-unspecified' }
             ]
         }]
     };
     myChart.setOption(option);
+    myChart.on('click', function(params) {
+        if (params.data && params.data.link) {
+            window.location.hash = params.data.link;
+        }
+    });
+    chartDom.style.cursor = 'pointer';
     window.addEventListener('resize', function() {
         myChart.resize();
     });

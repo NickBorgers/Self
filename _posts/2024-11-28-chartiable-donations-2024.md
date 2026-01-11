@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         tooltip: {
             formatter: function(info) {
-                return info.name + ': ' + info.value + '%';
+                return info.name + ': ' + info.value + '% (click to learn more)';
             }
         },
         series: [{
             type: 'treemap',
             roam: false,
-            nodeClick: false,
+            nodeClick: 'link',
             breadcrumb: { show: false },
             label: {
                 show: true,
@@ -37,23 +37,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 fontSize: 12
             },
             data: [
-                { name: 'Bellingcat', value: 93 },
-                { name: 'Semper Fi Fund', value: 93 },
-                { name: 'Forward Party', value: 84 },
-                { name: 'Unify America', value: 47 },
-                { name: 'Divided We Fall', value: 47 },
-                { name: 'Children International', value: 29 },
-                { name: 'Freedom Reads', value: 28 },
-                { name: 'Represent.us', value: 28 },
-                { name: 'EFF', value: 23 },
-                { name: 'Undue Medical Debt', value: 12 },
-                { name: 'ACLU', value: 9 },
-                { name: 'Wikimedia', value: 9 },
-                { name: 'Local Newspaper', value: 1 }
+                { name: 'Bellingcat', value: 93, link: '#bellingcat' },
+                { name: 'Semper Fi Fund', value: 93, link: '#semper-fi-fund' },
+                { name: 'Forward Party', value: 84, link: '#forward-party' },
+                { name: 'Unify America', value: 47, link: '#unify-america' },
+                { name: 'Divided We Fall', value: 47, link: '#divided-we-fall' },
+                { name: 'Children International', value: 29, link: '#children-international' },
+                { name: 'Freedom Reads', value: 28, link: '#freedom-reads' },
+                { name: 'Represent.us', value: 28, link: '#representus' },
+                { name: 'EFF', value: 23, link: '#eff' },
+                { name: 'Undue Medical Debt', value: 12, link: '#undue-medical-debt' },
+                { name: 'ACLU', value: 9, link: '#aclu' },
+                { name: 'Wikimedia', value: 9, link: '#wikimedia' },
+                { name: 'Local Newspaper', value: 1, link: '#local-newspaper-unspecified' }
             ]
         }]
     };
     myChart.setOption(option);
+    myChart.on('click', function(params) {
+        if (params.data && params.data.link) {
+            window.location.hash = params.data.link;
+        }
+    });
+    chartDom.style.cursor = 'pointer';
     window.addEventListener('resize', function() {
         myChart.resize();
     });
